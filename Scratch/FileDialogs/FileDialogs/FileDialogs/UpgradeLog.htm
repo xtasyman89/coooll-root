@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+ <html xmlns:msxsl="urn:schemas-microsoft-com:xslt"><head><meta content="en-us" http-equiv="Content-Language" /><meta content="text/html; charset=utf-16" http-equiv="Content-Type" /><link type="text/css" rel="stylesheet" href="_UpgradeReport_Files\UpgradeReport.css" /><title _locID="ConversionReport0">
+          Migration Report
+        </title><script type="text/javascript" language="javascript"> 
+          
+            // Startup 
+            // Hook up the the loaded event for the document/window, to linkify the document content
+            var startupFunction = function() { linkifyElement("messages"); };
+            
+            if(window.attachEvent)
+            {
+              window.attachEvent('onload', startupFunction);
+            }
+            else if (window.addEventListener) 
+            {
+              window.addEventListener('load', startupFunction, false);
+            }
+            else 
+            {
+              document.addEventListener('load', startupFunction, false);
+            } 
+            
+            // Toggles the visibility of table rows with the specified name 
+            function toggleTableRowsByName(name)
+            {
+               var allRows = document.getElementsByTagName('tr');
+               for (i=0; i < allRows.length; i++)
+               {
+                  var currentName = allRows[i].getAttribute('name');
+                  if(!!currentName && currentName.indexOf(name) == 0)
+                  {
+                      var isVisible = allRows[i].style.display == ''; 
+                      isVisible ? allRows[i].style.display = 'none' : allRows[i].style.display = '';
+                  }
+               }
+            }
+            
+            function scrollToFirstVisibleRow(name) 
+            {
+               var allRows = document.getElementsByTagName('tr');
+               for (i=0; i < allRows.length; i++)
+               {
+                  var currentName = allRows[i].getAttribute('name');
+                  var isVisible = allRows[i].style.display == ''; 
+                  if(!!currentName && currentName.indexOf(name) == 0 && isVisible)
+                  {
+                     allRows[i].scrollIntoView(true); 
+                     return true; 
+                  }
+               }
+               
+               return false;
+            }
+            
+            // Linkifies the specified text content, replaces candidate links with html links 
+            function linkify(text)
+            {
+                 if(!text || 0 === text.length)
+                 {
+                     return text; 
+                 }
+
+                 // Find http, https and ftp links and replace them with hyper links 
+                 var urlLink = /(http|https|ftp)\:\/\/[a-zA-Z0-9\-\.]+(:[a-zA-Z0-9]*)?\/?([a-zA-Z0-9\-\._\?\,\/\\\+&%\$#\=~;\{\}])*/gi;
+                 
+                 return text.replace(urlLink, '<a href="$&">$&</a>') ;
+            }
+            
+            // Linkifies the specified element by ID
+            function linkifyElement(id)
+            {
+                var element = document.getElementById(id);
+                if(!!element)
+                {
+                  element.innerHTML = linkify(element.innerHTML); 
+                }
+            }
+            
+            function ToggleMessageVisibility(projectName)
+            {
+              if(!projectName || 0 === projectName.length)
+              {
+                return; 
+              }
+              
+              toggleTableRowsByName("MessageRowClass" + projectName);
+              toggleTableRowsByName('MessageRowHeaderShow' + projectName);
+              toggleTableRowsByName('MessageRowHeaderHide' + projectName); 
+            }
+            
+            function ScrollToFirstVisibleMessage(projectName)
+            {
+              if(!projectName || 0 === projectName.length)
+              {
+                return; 
+              }
+              
+              // First try the 'Show messages' row
+              if(!scrollToFirstVisibleRow('MessageRowHeaderShow' + projectName))
+              {
+                // Failed to find a visible row for 'Show messages', try an actual message row 
+                scrollToFirstVisibleRow('MessageRowClass' + projectName); 
+              }
+            }
+           </script></head><body><h1 _locID="ConversionReport">
+          Migration Report - FileDialogs</h1><div id="content"><h2 _locID="OverviewTitle">Overview</h2><div id="overview"><table><tr><th></th><th _locID="ProjectTableHeader">Project</th><th _locID="PathTableHeader">Path</th><th _locID="ErrorsTableHeader">Errors</th><th _locID="WarningsTableHeader">Warnings</th><th _locID="MessagesTableHeader">Messages</th></tr><tr><td><img width="16" height="16" src="_UpgradeReport_Files\UpgradeReport_Warning.png" alt="Warning" /></td><td><strong><a href="#FileDialogs">FileDialogs</a></strong></td><td>FileDialogs.csproj</td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#FileDialogsWarning">1</a></td><td class="textCentered"><a href="#" onclick="ScrollToFirstVisibleMessage('FileDialogs'); return false;">34</a></td></tr></table></div><h2 _locID="SolutionAndProjectsTitle">Solution and projects</h2><div id="messages"><a name="FileDialogs" /><h3>FileDialogs</h3><table><tr id="FileDialogsHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr name="WarningRowClassFileDialogs"><td><a name="FileDialogsWarning" /><img width="16" height="16" src="_UpgradeReport_Files\UpgradeReport_Warning.png" alt="Warning" /></td><td class="messageCell"><strong>FileDialogs.csproj:
+        </strong><span>Your project is targeting .NET Framework 2.0 or 3.0. If your project uses assemblies requiring a newer .NET Framework, your project will fail to build. You can change the .NET Framework version by clicking Properties on the project menu and then selecting a new version in the '.NET Framework' dropdown box. (In Visual Basic, this is located on the Compile tab by clicking the 'Advanced Compiler Options...' button.)</span></td></tr><tr name="MessageRowHeaderShowFileDialogs"><td><img width="16" height="16" src="_UpgradeReport_Files\UpgradeReport_Information.png" /></td><td class="messageCell"><a _locID="ShowAdditionalMessages" href="#" name="FileDialogsMessage" onclick="ToggleMessageVisibility('FileDialogs'); return false;">
+          Show 34 additional messages
+        </a></td></tr><tr name="MessageRowClassFileDialogs" style="display: none"><td><a name="FileDialogsMessage" /><img width="16" height="16" src="_UpgradeReport_Files\UpgradeReport_Information.png" alt="Message" /></td><td class="messageCell"><strong>FileDialogs.csproj:
+        </strong><span>Project file successfully backed up as C:\Repositories\GitHub\sharpshell\Scratch\FileDialogs\FileDialogs\FileDialogs\Backup\FileDialogs.csproj</span></td></tr><tr name="MessageRowClassFileDialogs" style="display: none"><td><a name="FileDialogsMessage" /><img width="16" height="16" src="_UpgradeReport_Files\UpgradeReport_Information.png" alt="Message" /></td><td class="messageCell"><strong>ACListISF.cs:
+        </strong><span>File successfully backed up as C:\Repositories\GitHub\sharpshell\Scratch\FileDialogs\FileDialogs\FileDialogs\Backup\ACListISF.cs</span></td></tr><tr name="MessageRowClassFileDialogs" style="display: none"><td><a name="FileDialogsMessage" /><img width="16" height="16" src="_UpgradeReport_Files\UpgradeReport_Information.png" alt="Message" /></td><td class="messageCell"><strong>Design\FileDialogFilterEditorForm.cs:
+        </strong><span>File successfully backed up as C:\Repositories\GitHub\sharpshell\Scratch\FileDialogs\FileDialogs\FileDialogs\Backup\Design\FileDialogFilterEditorForm.cs</span></td></tr><tr name="MessageRowClassFileDialogs" style="display: none"><td><a name="FileDialogsMessage" /><img width="16" height="16" src="_UpgradeReport_Files\UpgradeReport_Information.png" alt="Message" /></td><td class="messageCell"><strong>Design\FileDialogFilterEditorForm.Designer.cs:
+        </strong><span>File successfully backed up as C:\Repositories\GitHub\sharpshell\Scratch\FileDialogs\FileDialogs\FileDialogs\Backup\Design\FileDialogFilterEditorForm.Designer.cs</span></td></tr><tr name="MessageRowClassFileDialogs" style="display: none"><td><a name="FileDialogsMessage" /><img width="16" height="16" src="_UpgradeReport_Files\UpgradeReport_Information.png" alt="Message" /></td><td class="messageCell"><strong>Design\PathEditor.cs:
+        </strong><span>File successfully backed up as C:\Repositories\GitHub\sharpshell\Scratch\FileDialogs\FileDialogs\FileDialogs\Backup\Design\PathEditor.cs</span></td></tr><tr name="MessageRowClassFileDialogs" style="display: none"><td><a name="FileDialogsMessage" /><img width="16" height="16" src="_UpgradeReport_Files\UpgradeReport_Information.png" alt="Message" /></td><td class="messageCell"><strong>Design\VsPropertyGrid.cs:
+        </strong><span>File successfully backed up as C:\Repositories\GitHub\sharpshell\Scratch\FileDialogs\FileDialogs\FileDialogs\Backup\Design\VsPropertyGrid.cs</span></td></tr><tr name="MessageRowClassFileDialogs" style="display: none"><td><a name="FileDialogsMessage" /><img width="16" height="16" src="_UpgradeReport_Files\UpgradeReport_Information.png" alt="Message" /></td><td class="messageCell"><strong>Design\FileDialogPlacesEditor.cs:
+        </strong><span>File successfully backed up as C:\Repositories\GitHub\sharpshell\Scratch\FileDialogs\FileDialogs\FileDialogs\Backup\Design\FileDialogPlacesEditor.cs</span></td></tr><tr name="MessageRowClassFileDialogs" style="display: none"><td><a name="FileDialogsMessage" /><img width="16" height="16" src="_UpgradeReport_Files\UpgradeReport_Information.png" alt="Message" /></td><td class="messageCell"><strong>FileDialog.cs:
+        </strong><span>File successfully backed up as C:\Repositories\GitHub\sharpshell\Scratch\FileDialogs\FileDialogs\FileDialogs\Backup\FileDialog.cs</span></td></tr><tr name="MessageRowClassFileDialogs" style="display: none"><td><a name="FileDialogsMessage" /><img width="16" height="16" src="_UpgradeReport_Files\UpgradeReport_Information.png" alt="Message" /></td><td class="messageCell"><strong>FileDialog.Designer.cs:
+        </strong><span>File successfully backed up as C:\Repositories\GitHub\sharpshell\Scratch\FileDialogs\FileDialogs\FileDialogs\Backup\FileDialog.Designer.cs</span></td></tr><tr name="MessageRowClassFileDialogs" style="display: none"><td><a name="FileDialogsMessage" /><img width="16" height="16" src="_UpgradeReport_Files\UpgradeReport_Information.png" alt="Message" /></td><td class="messageCell"><strong>FileDialogPlace.cs:
+        </strong><span>File successfully backed up as C:\Repositories\GitHub\sharpshell\Scratch\FileDialogs\FileDialogs\FileDialogs\Backup\FileDialogPlace.cs</span></td></tr><tr name="MessageRowClassFileDialogs" style="display: none"><td><a name="FileDialogsMessage" /><img width="16" height="16" src="_UpgradeReport_Files\UpgradeReport_Information.png" alt="Message" /></td><td class="messageCell"><strong>NativeMethods.cs:
+        </strong><span>File successfully backed up as C:\Repositories\GitHub\sharpshell\Scratch\FileDialogs\FileDialogs\FileDialogs\Backup\NativeMethods.cs</span></td></tr><tr name="MessageRowClassFileDialogs" style="display: none"><td><a name="FileDialogsMessage" /><img width="16" height="16" src="_UpgradeReport_Files\UpgradeReport_Information.png" alt="Message" /></td><td class="messageCell"><strong>NewFolderDialog.cs:
+        </strong><span>File successfully backed up as C:\Repositories\GitHub\sharpshell\Scratch\FileDialogs\FileDialogs\FileDialogs\Backup\NewFolderDialog.cs</span></td></tr><tr name="MessageRowClassFileDialogs" style="display: none"><td><a name="FileDialogsMessage" /><img width="16" height="16" src="_UpgradeReport_Files\UpgradeReport_Information.png" alt="Message" /></td><td class="messageCell"><strong>NewFolderDialog.Designer.cs:
+        </strong><span>File successfully backed up as C:\Repositories\GitHub\sharpshell\Scratch\FileDialogs\FileDialogs\FileDialogs\Backup\NewFolderDialog.Designer.cs</span></td></tr><tr name="MessageRowClassFileDialogs" style="display: none"><td><a name="FileDialogsMessage" /><img width="16" height="16" src="_UpgradeReport_Files\UpgradeReport_Information.png" alt="Message" /></td><td class="messageCell"><strong>OpenFileDialog.cs:
+        </strong><span>File successfully backed up as C:\Repositories\GitHub\sharpshell\Scratch\FileDialogs\FileDialogs\FileDialogs\Backup\OpenFileDialog.cs</span></td></tr><tr name="MessageRowClassFileDialogs" style="display: none"><td><a name="FileDialogsMessage" /><img width="16" height="16" src="_UpgradeReport_Files\UpgradeReport_Information.png" alt="Message" /></td><td class="messageCell"><strong>PathUtils.cs:
+        </strong><span>File successfully backed up as C:\Repositories\GitHub\sharpshell\Scratch\FileDialogs\FileDialogs\FileDialogs\Backup\PathUtils.cs</span></td></tr><tr name="MessageRowClassFileDialogs" style="display: none"><td><a name="FileDialogsMessage" /><img width="16" height="16" src="_UpgradeReport_Files\UpgradeReport_Information.png" alt="Message" /></td><td class="messageCell"><strong>Properties\AssemblyInfo.cs:
+        </strong><span>File successfully backed up as C:\Repositories\GitHub\sharpshell\Scratch\FileDialogs\FileDialogs\FileDialogs\Backup\Properties\AssemblyInfo.cs</span></td></tr><tr name="MessageRowClassFileDialogs" style="display: none"><td><a name="FileDialogsMessage" /><img width="16" height="16" src="_UpgradeReport_Files\UpgradeReport_Information.png" alt="Message" /></td><td class="messageCell"><strong>Properties\Resources.Designer.cs:
+        </strong><span>File successfully backed up as C:\Repositories\GitHub\sharpshell\Scratch\FileDialogs\FileDialogs\FileDialogs\Backup\Properties\Resources.Designer.cs</span></td></tr><tr name="MessageRowClassFileDialogs" style="display: none"><td><a name="FileDialogsMessage" /><img width="16" height="16" src="_UpgradeReport_Files\UpgradeReport_Information.png" alt="Message" /></td><td class="messageCell"><strong>SaveFileDialog.cs:
+        </strong><span>File successfully backed up as C:\Repositories\GitHub\sharpshell\Scratch\FileDialogs\FileDialogs\FileDialogs\Backup\SaveFileDialog.cs</span></td></tr><tr name="MessageRowClassFileDialogs" style="display: none"><td><a name="FileDialogsMessage" /><img width="16" height="16" src="_UpgradeReport_Files\UpgradeReport_Information.png" alt="Message" /></td><td class="messageCell"><strong>LookInComboBox.cs:
+        </strong><span>File successfully backed up as C:\Repositories\GitHub\sharpshell\Scratch\FileDialogs\FileDialogs\FileDialogs\Backup\LookInComboBox.cs</span></td></tr><tr name="MessageRowClassFileDialogs" style="display: none"><td><a name="FileDialogsMessage" /><img width="16" height="16" src="_UpgradeReport_Files\UpgradeReport_Information.png" alt="Message" /></td><td class="messageCell"><strong>SelectFolderDialog.cs:
+        </strong><span>File successfully backed up as C:\Repositories\GitHub\sharpshell\Scratch\FileDialogs\FileDialogs\FileDialogs\Backup\SelectFolderDialog.cs</span></td></tr><tr name="MessageRowClassFileDialogs" style="display: none"><td><a name="FileDialogsMessage" /><img width="16" height="16" src="_UpgradeReport_Files\UpgradeReport_Information.png" alt="Message" /></td><td class="messageCell"><strong>ShellImageList.cs:
+        </strong><span>File successfully backed up as C:\Repositories\GitHub\sharpshell\Scratch\FileDialogs\FileDialogs\FileDialogs\Backup\ShellImageList.cs</span></td></tr><tr name="MessageRowClassFileDialogs" style="display: none"><td><a name="FileDialogsMessage" /><img width="16" height="16" src="_UpgradeReport_Files\UpgradeReport_Information.png" alt="Message" /></td><td class="messageCell"><strong>SpecialFolder.cs:
+        </strong><span>File successfully backed up as C:\Repositories\GitHub\sharpshell\Scratch\FileDialogs\FileDialogs\FileDialogs\Backup\SpecialFolder.cs</span></td></tr><tr name="MessageRowClassFileDialogs" style="display: none"><td><a name="FileDialogsMessage" /><img width="16" height="16" src="_UpgradeReport_Files\UpgradeReport_Information.png" alt="Message" /></td><td class="messageCell"><strong>SplitButton.cs:
+        </strong><span>File successfully backed up as C:\Repositories\GitHub\sharpshell\Scratch\FileDialogs\FileDialogs\FileDialogs\Backup\SplitButton.cs</span></td></tr><tr name="MessageRowClassFileDialogs" style="display: none"><td><a name="FileDialogsMessage" /><img width="16" height="16" src="_UpgradeReport_Files\UpgradeReport_Information.png" alt="Message" /></td><td class="messageCell"><strong>ToolStripRenderers.cs:
+        </strong><span>File successfully backed up as C:\Repositories\GitHub\sharpshell\Scratch\FileDialogs\FileDialogs\FileDialogs\Backup\ToolStripRenderers.cs</span></td></tr><tr name="MessageRowClassFileDialogs" style="display: none"><td><a name="FileDialogsMessage" /><img width="16" height="16" src="_UpgradeReport_Files\UpgradeReport_Information.png" alt="Message" /></td><td class="messageCell"><strong>NewFolderDialog.resx:
+        </strong><span>File successfully backed up as C:\Repositories\GitHub\sharpshell\Scratch\FileDialogs\FileDialogs\FileDialogs\Backup\NewFolderDialog.resx</span></td></tr><tr name="MessageRowClassFileDialogs" style="display: none"><td><a name="FileDialogsMessage" /><img width="16" height="16" src="_UpgradeReport_Files\UpgradeReport_Information.png" alt="Message" /></td><td class="messageCell"><strong>Properties\Resources.resx:
+        </strong><span>File successfully backed up as C:\Repositories\GitHub\sharpshell\Scratch\FileDialogs\FileDialogs\FileDialogs\Backup\Properties\Resources.resx</span></td></tr><tr name="MessageRowClassFileDialogs" style="display: none"><td><a name="FileDialogsMessage" /><img width="16" height="16" src="_UpgradeReport_Files\UpgradeReport_Information.png" alt="Message" /></td><td class="messageCell"><strong>Design\FileDialogFilterEditorForm.resx:
+        </strong><span>File successfully backed up as C:\Repositories\GitHub\sharpshell\Scratch\FileDialogs\FileDialogs\FileDialogs\Backup\Design\FileDialogFilterEditorForm.resx</span></td></tr><tr name="MessageRowClassFileDialogs" style="display: none"><td><a name="FileDialogsMessage" /><img width="16" height="16" src="_UpgradeReport_Files\UpgradeReport_Information.png" alt="Message" /></td><td class="messageCell"><strong>Design\FileDialogPlacesEditorForm.resx:
+        </strong><span>File successfully backed up as C:\Repositories\GitHub\sharpshell\Scratch\FileDialogs\FileDialogs\FileDialogs\Backup\Design\FileDialogPlacesEditorForm.resx</span></td></tr><tr name="MessageRowClassFileDialogs" style="display: none"><td><a name="FileDialogsMessage" /><img width="16" height="16" src="_UpgradeReport_Files\UpgradeReport_Information.png" alt="Message" /></td><td class="messageCell"><strong>FileDialog.resx:
+        </strong><span>File successfully backed up as C:\Repositories\GitHub\sharpshell\Scratch\FileDialogs\FileDialogs\FileDialogs\Backup\FileDialog.resx</span></td></tr><tr name="MessageRowClassFileDialogs" style="display: none"><td><a name="FileDialogsMessage" /><img width="16" height="16" src="_UpgradeReport_Files\UpgradeReport_Information.png" alt="Message" /></td><td class="messageCell"><strong>OpenFileDialog.bmp:
+        </strong><span>File successfully backed up as C:\Repositories\GitHub\sharpshell\Scratch\FileDialogs\FileDialogs\FileDialogs\Backup\OpenFileDialog.bmp</span></td></tr><tr name="MessageRowClassFileDialogs" style="display: none"><td><a name="FileDialogsMessage" /><img width="16" height="16" src="_UpgradeReport_Files\UpgradeReport_Information.png" alt="Message" /></td><td class="messageCell"><strong>SaveFileDialog.bmp:
+        </strong><span>File successfully backed up as C:\Repositories\GitHub\sharpshell\Scratch\FileDialogs\FileDialogs\FileDialogs\Backup\SaveFileDialog.bmp</span></td></tr><tr name="MessageRowClassFileDialogs" style="display: none"><td><a name="FileDialogsMessage" /><img width="16" height="16" src="_UpgradeReport_Files\UpgradeReport_Information.png" alt="Message" /></td><td class="messageCell"><strong>SelectFolderDialog.bmp:
+        </strong><span>File successfully backed up as C:\Repositories\GitHub\sharpshell\Scratch\FileDialogs\FileDialogs\FileDialogs\Backup\SelectFolderDialog.bmp</span></td></tr><tr name="MessageRowClassFileDialogs" style="display: none"><td><a name="FileDialogsMessage" /><img width="16" height="16" src="_UpgradeReport_Files\UpgradeReport_Information.png" alt="Message" /></td><td class="messageCell"><strong>FileDialogs.csproj:
+        </strong><span>Project migrated successfully</span></td></tr><tr name="MessageRowClassFileDialogs" style="display: none"><td><a name="FileDialogsMessage" /><img width="16" height="16" src="_UpgradeReport_Files\UpgradeReport_Information.png" alt="Message" /></td><td class="messageCell"><strong>FileDialogs.csproj:
+        </strong><span>Scan complete: Migration not required for project files.</span></td></tr><tr style="display: none" name="MessageRowHeaderHideFileDialogs"><td><img width="16" height="16" src="_UpgradeReport_Files\UpgradeReport_Information.png" /></td><td class="messageCell"><a _locID="HideAdditionalMessages" href="#" name="FileDialogsMessage" onclick="ToggleMessageVisibility('FileDialogs'); return false;">
+          Hide 34 additional messages
+        </a></td></tr></table></div></div></body></html>

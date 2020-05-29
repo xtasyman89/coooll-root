@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-16"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeReport>
+<Properties><Property Name="Solution" Value="ExplorerDataProvider">
+</Property><Property Name="Solution File" Value="C:\Users\Dave Kerr-LLN\Downloads\ExplorerDataProvider\ExplorerDataProvider.sln">
+</Property><Property Name="Date" Value="22 January 2014">
+</Property><Property Name="Time" Value="21:56">
+</Property></Properties><Event ErrorLevel="3" Project="ExplorerDataProvider" Source="ExplorerDataProvider.vcproj" Description="OneWayUpgrade">
+</Event><Event ErrorLevel="3" Project="" Source="ExplorerDataProvider.sln" Description="SafeUpgrade">
+</Event><Event ErrorLevel="1" Project="" Source="ExplorerDataProvider.sln" Description="Visual Studio needs to make non-functional changes to this project in order to enable the project to open in this version and Visual Studio 2010 SP1 without impacting project behavior.">
+</Event><Event ErrorLevel="0" Project="" Source="ExplorerDataProvider.sln" Description="File successfully backed up as C:\Users\Dave Kerr-LLN\Downloads\ExplorerDataProvider\Backup\ExplorerDataProvider.sln">
+</Event><Event ErrorLevel="0" Project="ExplorerDataProvider" Source="ExplorerDataProvider.vcproj" Description="Converting project file 'C:\Users\Dave Kerr-LLN\Downloads\ExplorerDataProvider\ExplorerDataProvider.vcproj'.">
+</Event><Event ErrorLevel="1" Project="ExplorerDataProvider" Source="ExplorerDataProvider.vcproj" Description="VCWebServiceProxyGeneratorTool is no longer supported. The tool has been removed from your project settings.">
+</Event><Event ErrorLevel="1" Project="ExplorerDataProvider" Source="ExplorerDataProvider.vcproj" Description="Attribute 'Detect64BitPortabilityProblems' of 'VCCLCompilerTool' is not supported in this version and has been removed during conversion.">
+</Event><Event ErrorLevel="1" Project="ExplorerDataProvider" Source="ExplorerDataProvider.vcproj" Description="Attribute 'Detect64BitPortabilityProblems' of 'VCCLCompilerTool' is not supported in this version and has been removed during conversion.">
+</Event><Event ErrorLevel="1" Project="ExplorerDataProvider" Source="ExplorerDataProvider.vcproj" Description="Attribute 'Detect64BitPortabilityProblems' of 'VCCLCompilerTool' is not supported in this version and has been removed during conversion.">
+</Event><Event ErrorLevel="1" Project="ExplorerDataProvider" Source="ExplorerDataProvider.vcproj" Description="Attribute 'Detect64BitPortabilityProblems' of 'VCCLCompilerTool' is not supported in this version and has been removed during conversion.">
+</Event><Event ErrorLevel="0" Project="ExplorerDataProvider" Source="ExplorerDataProvider.vcproj" Description="Done converting to new project file 'C:\Users\Dave Kerr-LLN\Downloads\ExplorerDataProvider\ExplorerDataProvider.vcxproj'.">
+</Event><Event ErrorLevel="3" Project="ExplorerDataProvider" Source="ExplorerDataProvider.vcproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="ExplorerDataProvider.sln" Description="Solution migrated successfully">
+</Event><Event ErrorLevel="3" Project="" Source="ExplorerDataProvider.sln" Description="Converted">
+</Event></UpgradeReport>
